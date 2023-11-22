@@ -1,6 +1,6 @@
 const helloWorldRegex = (str) => {
   const regex = /hello world/i;
-return regex.test(str);
+  return regex.test(str);
 };
 
 const hasAVowel = (str) => {
@@ -27,7 +27,7 @@ const hasPunctuationEnd = (str) => {
 
 const hasNothingOrDigits = (str) => {
   const regex = /^[^a-zA-Z]*$/i;
-return regex.test(str);
+  return regex.test(str);
 };
 // console.log(hasNothingOrDigits(''))
 
@@ -43,6 +43,7 @@ const isValidEmail = (str) => {
   return regex.test(str);
 };
 
+/* This is so close! But it only accepts phone numbers that start with 860. How can you make it more flexible? */
 const isValidPhoneNumber = (str) => {
   const regex = /^(\(860\)|860)[ -.]?\d{3}(?:[ -.]?\d{4})?$/;
   return regex.test(str);
@@ -65,8 +66,8 @@ console.log(matchAllNumbersAsNumbers('im 23'))
 
 
 const matchAllWords = (str) => {
-    const regex = /[a-zA-Z]+(?:'[a-zA-Z]+)?/g;
-    return str.match(regex) || [];
+  const regex = /[a-zA-Z]+(?:'[a-zA-Z]+)?/g;
+  return str.match(regex) || [];
 };
 console.log(matchAllWords('hello world!'))
 
@@ -90,7 +91,7 @@ const nameRedacter = (str) => {
 
 console.log(nameRedacter('my name is ITZEL'))
 
-const camelToSnakeCase = (str) => {};
+const camelToSnakeCase = (str) => { };
 
 module.exports = {
   helloWorldRegex,
